@@ -18,8 +18,9 @@ COPY --from=build /tmp/$LibreOffice_File /tmp/$LibreOffice_File
 RUN cd /tmp/$LibreOffice_File/RPMS ; yum install *.rpm -y
 
 # lib
-RUN yum install cups-libs  cairo-devel libSM fontconfig -y
+RUN yum install cups-libs  cairo-devel libSM fontconfig fontconfig langpacks-zh_CN -y
 
+# RUN yum groupinstall "fonts"
 
 # clean 
 RUN  rm -rf /tmp/*
