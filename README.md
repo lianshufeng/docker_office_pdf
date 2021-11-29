@@ -1,11 +1,16 @@
 # docker_office_pdf
 
-- bash
+- update
 ````shell
-docker run -it --rm -v /C/Windows/Fonts:/usr/local/fonts lianshufeng/office_pdf /bin/bash
+docker pull lianshufeng/office_pdf
 ````
 
-- word to pdf (powershell)
+- bash
+````shell
+docker run -it --rm lianshufeng/office_pdf /bin/bash
+````
+
+- word to pdf ( powershell + fonts )
 ````powershell
-docker run -it --rm -v /C/Windows/Fonts:/usr/local/fonts -v ${PWD}/in:/work/in -v ${PWD}/out:/work/out lianshufeng/office_pdf  soffice --headless --invisible --convert-to pdf /work/in/1.pptx --outdir /work/out
+docker run -it --rm -v /C/Windows/Fonts:/usr/share/fonts/Fonts -v ${PWD}/work:/work lianshufeng/office_pdf  soffice --headless --invisible --convert-to pdf /work/in/1.docx --outdir /work/out/
 ````
