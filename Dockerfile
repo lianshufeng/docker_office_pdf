@@ -1,6 +1,6 @@
 FROM centos:8 as build
 MAINTAINER lianshufeng <251708339@qq.com>
-ARG LibreOffice_URL="https://www.libreoffice.org/donate/dl/rpm-x86_64/7.2.3/zh-CN/LibreOffice_7.2.3_Linux_x86-64_rpm.tar.gz"
+ARG LibreOffice_URL="https://download.documentfoundation.org/libreoffice/stable/7.2.3/rpm/x86_64/LibreOffice_7.2.3_Linux_x86-64_rpm.tar.gz"
 ARG LibreOffice_File="LibreOffice_7.2.3.2_Linux_x86-64_rpm"
 
 
