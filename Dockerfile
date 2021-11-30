@@ -5,7 +5,7 @@ ARG LibreOffice_File="LibreOffice_7.2.3.2_Linux_x86-64_rpm"
 
 
 # download
-RUN curl $LibreOffice_URL -o /tmp/LibreOffice_rpm.tar.gz
+RUN curl -L $LibreOffice_URL -o /tmp/LibreOffice_rpm.tar.gz
 RUN cd /tmp/ ; tar xvzf LibreOffice_rpm.tar.gz 
 
 
